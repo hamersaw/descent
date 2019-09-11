@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Site.Title }}</title>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <div id="container">
+        {{ partial "header.html" . }}
+
+        <div id="content">
+            <div id="content-pane">
+                <h1>Updates</h1>
+                {{ range first 10 .Data.Pages }}
+                    {{ if eq .Type "post"}}
+                        <div class="post">
+                            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+
+                            <p> {{ .Summary }} </p>
+
+                            <div class="post-footer">
+                                {{ .Date.Format "Monday - Jan 2, 2006 - 15:04 MST" }}
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <div id="container">
+        {{ partial "header.html" . }}
+
+        <div id="content">
+            <div id="content-pane">
+                <h1>{{ .Title }}</h1>
+                <h2>{{ .Date.Format "Monday - Jan 2, 2006 - 15:04 MST" }}</h2>
+                {{ .Content }}
+            </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

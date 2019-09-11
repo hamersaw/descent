@@ -1,0 +1,118 @@
+* {
+    font-family: sans-serif;
+}
+
+:root {
+    --header-height: 625px;
+    --footer-height: 40px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    min-height: 100%;
+}
+
+#header {
+    height: var(--header-height);
+}
+
+#header-image {
+    position: absolute;
+    height: var(--header-height);
+
+    overflow: hidden;
+}
+
+#header-image img {
+    position: relative;
+    bottom: 45%;
+
+    width: 100%;
+}
+
+#navbar {
+    position: absolute;
+    right: 5%;
+}
+
+#navbar a {
+    float: right;
+    padding: 14px 16px;
+
+    color: white;
+    font-size: 20px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#navbar a:hover {
+    color: grey;
+}
+
+#title {
+    position: absolute;
+    top: 220px;
+    left: 0px;
+    width: 100%;
+
+    color: white;
+    font-size: 128px;
+
+    text-align: center;
+}
+
+#subtitle {
+    position: absolute;
+    top: 360px;
+    left: 0px;
+    width: 100%;
+
+    color: white;
+    font-size: 36px;
+
+    text-align: center;
+}
+
+#content {
+    top: var(--header-height);
+    height: auto;
+
+    text-align: left;
+
+    padding-bottom: var(--footer-height);
+}
+
+#content-pane {
+    position: relative;
+    left: 30%;
+    width: 40%;
+
+    padding-bottom: 20px;
+}
+
+.post {
+    border-bottom: 2px solid black;
+    padding: 5px;
+}
+
+.post-footer {
+    text-align: center;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+
+    width: 100%;
+    height: var(--footer-height);
+
+    background-color: #3f3f3f;
+}

@@ -1,0 +1,23 @@
+    <div id="header">
+        <div id="header-image">
+            <img src="{{ .Site.BaseURL }}/header-image.jpg" alt="some text">
+        </div>
+
+        <div id="navbar">
+            {{ range .Site.RegularPages }}
+                {{ if eq .Type "page" }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            {{ end }}
+
+            <a href="{{ .Site.BaseURL }}">home</a>
+        </div>
+
+        <div id="title">
+            DESCENT
+        </div>
+
+        <div id="subtitle">
+            brewing company
+        </div>
+    </div>
