@@ -1,6 +1,6 @@
     <div id="header">
         <div id="header-image">
-            <img src="{{ .Site.BaseURL }}/header-image.jpg" alt="some text">
+            <img src="{{ .Site.BaseURL }}/{{ .Site.Params.headerImage }}" alt="some text">
         </div>
 
         <div id="navbar">
@@ -14,10 +14,10 @@
         </div>
 
         <div id="title">
-            DESCENT
+            {{ .Site.Params.headerTitle }}
         </div>
 
         <div id="subtitle">
-            brewing company
+            {{ .Site.Params.headerSubtitle }}
         </div>
     </div>
